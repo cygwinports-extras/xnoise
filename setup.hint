@@ -1,0 +1,10 @@
+category: Audio Video
+requires: gstreamer0.10-plugins-good libcairo libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgstinterfaces0.10_0 libgstreamer0.10_0 libgtk2.0_0 libintl8 libnotify4 libpango1.0_0 libsoup2.4_1 libsqlite3_0 libtag_c0 libunique1.0_0 libX11_6 libxml2
+sdesc: "Tracklist-centric media player"
+ldesc: "Xnoise is a media player for GTK+ with a slick GUI, great speed 
+and lots of features. Unlike other players, Xnoise uses a tracklist 
+centric design. The tracklist is a list of video or music tracks that 
+are played one by one without being removed. This gives you the 
+possibility to queue any track in any order, regardless if they are on 
+the same album. Tracks or groups of tracks can be reordered at any time 
+via drag and drop."

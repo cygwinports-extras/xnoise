@@ -1,0 +1,19 @@
+inherit gnome2
+
+DESCRIPTION="Tracklist-centric media player"
+HOMEPAGE="http://www.xnoise-media-player.com/"
+SRC_URI="http://xnoise.googlecode.com/files/${P}.tar.bz2"
+
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="setup devel"
+xnoise_CONTENTS="--exclude=libxnoise.* --exclude=vala etc/ usr/bin/ usr/lib/xnoise/ usr/share/"
+xnoise_devel_CONTENTS="usr/include/ usr/lib/pkgconfig/ usr/lib/xnoise/libxnoise.* usr/share/vala/"
+
+src_compile() {
+	cd ${S}
+	gnome2_autoreconf
+	cd ${B}
+	gnome2_configure
+	cygmake -C libxnoise PLUGIN_LIBTOOL_FLAGS="-no-undefined"
+	cygmake PLUGIN_LIBTOOL_FLAGS="-no-undefined \$(top_builddir)/libxnoise/libxnoise.la"
+}
