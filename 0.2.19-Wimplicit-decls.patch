@@ -1,0 +1,104 @@
+--- origsrc/xnoise-0.2.19/plugins/azlyrics/xnoise-azlyrics-registration.vala	2012-03-18 10:16:16.000000000 -0500
++++ src/xnoise-0.2.19/plugins/azlyrics/xnoise-azlyrics-registration.vala	2013-11-12 03:47:16.960394200 -0600
+@@ -30,5 +30,6 @@
+  
+ [ModuleInit]
+ public Type init_module(TypeModule module) { 
++    typeof(Xnoise.Azlyrics);
+     return typeof(Xnoise.AzlyricsPlugin);
+ }
+--- origsrc/xnoise-0.2.19/plugins/chartlyrics/xnoise-chartlyrics-registration.vala	2012-03-18 10:16:16.000000000 -0500
++++ src/xnoise-0.2.19/plugins/chartlyrics/xnoise-chartlyrics-registration.vala	2013-11-12 03:49:03.023460600 -0600
+@@ -30,5 +30,6 @@
+  
+ [ModuleInit]
+ public Type init_module(TypeModule module) { 
++    typeof(Xnoise.Chartlyrics);
+     return typeof(Xnoise.ChartlyricsPlugin);
+ }
+--- origsrc/xnoise-0.2.19/plugins/databaseLyrics/xnoise-database-lyrics-registration.vala	2012-03-18 10:16:16.000000000 -0500
++++ src/xnoise-0.2.19/plugins/databaseLyrics/xnoise-database-lyrics-registration.vala	2013-11-12 03:53:04.356264100 -0600
+@@ -30,5 +30,7 @@
+  
+ [ModuleInit]
+ public Type init_module(TypeModule module) { 
++    typeof(Xnoise.DatabaseLyrics);
++    typeof(Xnoise.DatabaseLyricsWriter);
+     return typeof(Xnoise.DatabaseLyricsPlugin);
+ }
+--- origsrc/xnoise-0.2.19/plugins/lastfm/xnoise-lastfm-registration.vala	2012-03-18 10:16:16.000000000 -0500
++++ src/xnoise-0.2.19/plugins/lastfm/xnoise-lastfm-registration.vala	2013-11-12 04:04:33.639688800 -0600
+@@ -30,5 +30,15 @@
+  
+ [ModuleInit]
+ public Type init_module(TypeModule module) { 
++    typeof(Lastfm.Album);
++    typeof(Lastfm.Artist);
++    typeof(Lastfm.ResponseHandlerContainer);
++    typeof(Lastfm.Session);
++    typeof(Lastfm.Track);
++    typeof(Lastfm.UrlBuilder);
++    typeof(Lastfm.Util);
++    typeof(Lastfm.WebAccess);
++    typeof(Xnoise.LastFmCovers);
++    typeof(Xnoise.LfmWidget);
+     return typeof(Xnoise.Lfm);
+ }
+--- origsrc/xnoise-0.2.19/plugins/lyricwiki/xnoise-lyricwiki-registration.vala	2012-03-18 10:16:16.000000000 -0500
++++ src/xnoise-0.2.19/plugins/lyricwiki/xnoise-lyricwiki-registration.vala	2013-11-12 03:53:38.002188500 -0600
+@@ -30,5 +30,6 @@
+  
+ [ModuleInit]
+ public Type init_module(TypeModule module) { 
++    typeof(Xnoise.Lyricwiki);
+     return typeof(Xnoise.LyricwikiPlugin);
+ }
+--- origsrc/xnoise-0.2.19/plugins/magnatune/magnatune-registration.vala	2012-08-09 08:08:22.000000000 -0500
++++ src/xnoise-0.2.19/plugins/magnatune/magnatune-registration.vala	2013-11-12 04:22:25.398990000 -0600
+@@ -30,5 +30,15 @@
+  
+ [ModuleInit]
+ public Type init_module(TypeModule module) { 
++    typeof(MagMusicStore);
++    typeof(DockableMagnatuneMS);
++    typeof(MagnatuneDatabaseConverter);
++    typeof(MagnatuneDatabaseReader);
++    typeof(MagnatuneSettings);
++    typeof(MagnatuneTreeStore);
++    typeof(MagnatuneTreeView);
++    typeof(MagnatuneTreeView.FlowingTextRenderer);
++    typeof(MagnatuneWidget);
++    typeof(MagnatuneWidget.MagnatuneChangeDetector);
+     return typeof(MagnatunePlugin);
+ }
+--- origsrc/xnoise-0.2.19/plugins/mediakeys/xnoise-mediakeys-registration.vala	2012-03-18 10:16:16.000000000 -0500
++++ src/xnoise-0.2.19/plugins/mediakeys/xnoise-mediakeys-registration.vala	2013-11-12 04:24:02.988571800 -0600
+@@ -30,5 +30,6 @@
+ 
+ [ModuleInit]
+ public Type init_module(TypeModule module) { 
++    typeof(GlobalKey);
+     return typeof(Xnoise.MediaKeys);
+ }
+--- origsrc/xnoise-0.2.19/plugins/mpris/xnoise-mpris-registration.vala	2012-03-18 10:16:16.000000000 -0500
++++ src/xnoise-0.2.19/plugins/mpris/xnoise-mpris-registration.vala	2013-11-12 04:27:05.776026600 -0600
+@@ -30,5 +30,8 @@
+  
+ [ModuleInit]
+ public Type init_module(TypeModule module) { 
++    typeof(MprisPlayer);
++    typeof(MprisRoot);
++    typeof(MprisTrackList);
+     return typeof(Xnoise.Mpris);
+ }
+--- origsrc/xnoise-0.2.19/plugins/mpris_one/xnoise-mpris-one-registration.vala	2012-03-18 10:16:16.000000000 -0500
++++ src/xnoise-0.2.19/plugins/mpris_one/xnoise-mpris-one-registration.vala	2013-11-12 04:29:29.186229200 -0600
+@@ -30,5 +30,8 @@
+  
+ [ModuleInit]
+ public Type init_module(TypeModule module) { 
++    typeof(FirstMprisPlayer);
++    typeof(FirstMprisRoot);
++    typeof(FirstMprisTrackList);
+     return typeof(Xnoise.FirstMpris);
+ }
